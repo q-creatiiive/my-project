@@ -1,72 +1,197 @@
-
 <!DOCTYPE html>
-<html lang="ar"  dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>من نحن</title>
+  <title>مركز الفعاليات</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- استدعاء Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
- 
-<!-- استدعاء الهيدر -->
-  <div id="header"></div>
+  <!-- ناف بار -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="/images/Madinah.png" alt="شعار" width="250">
+      </a>
 
-  <!-- المحتوى الرئيسي -->
- 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">الصفحة الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">الفعاليات</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">المقرات</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- قسم البانر -->
+  <section class="events-section text-center text-white d-flex align-items-center justify-content-center">
+    <div class="overlay-box">
+      <h1>مركز فعاليات منطقة المدينة <br>المنورة</h1>
+      <p>يسهل المركز على الجهات المعنية عرض خدمات استئجار <br>المساحات للمستفيدين من منظمي الفعاليات</p>
+    </div>
+  </section>
+
+  <!-- قسم الفعاليات -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- النص -->
+        <div class="event-text col-md-6 text-end">
+          <h3 class="fw-bold text-primary mb-3">
+            انضم إلينا لجعل فعاليتك فريدة <br>
+            وممتعة 
+            نحن هنا لتحقيق رؤيتك
+          </h3>
+          <a href="#" class="event-button btn btn-primary" onclick="openEventPopup()">
+            سجل فعاليتك الآن
+          </a>
+        </div>
+
+        <!-- الصورة -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="/images/event.webp" class="img-fluid rounded shadow" alt="قاعة فعاليات">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم المقرات -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- الصورة -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="/images/event.webp" class="img-fluid rounded shadow" alt="قاعة فعاليات">
+        </div>
+
+        <!-- النص -->
+        <div class="event-text col-md-6 text-center">
+          <h3 class="fw-bold text-primary mb-3">
+            مساحات متنوعة <br> حول منطقة المدينة المنورة
+          </h3>
+          <a href="#" class="event-button btn btn-primary" onclick="openLocationPopup()">
+            سجل مقر فعاليتك
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
-   <div class="flex-center">
-  <div class="contact-card">
-      
-      <!-- العمود الأول - اللوجو -->
+
+  <!-- البوب أب 1: سجل فعاليتك -->
+  <div class="popup-overlay" id="popupEvent">
+    <div class="popup-box">
+      <button class="close-btn" onclick="closeEventPopup()">&times;</button>
+      <div class="popup-left"></div>
+      <div class="popup-right">
+        <h3>سجل فعاليتك</h3>
+        <form id="eventForm">
+          <label>اسم الفعالية *</label>
+          <input type="text" class="form-control mb-2" required>
+          <label>موعد الفعالية *</label>
+          <input type="date" class="form-control mb-2" required>
+          <label>مقر الفعالية *</label>
+          <input type="text" class="form-control mb-2" required>
+          <label>المدينة</label>
+          <input type="text" class="form-control mb-2">
+          <label>اسم الجهة *</label>
+          <input type="text" class="form-control mb-2" required>
+          <label>شعار الجهة *</label>
+          <input type="file" class="form-control mb-2" accept="image/*">
+          <label>الجوال *</label>
+          <input type="text" id="eventPhone" class="form-control mb-2" placeholder="05XXXXXXXX" required maxlength="10">
+          <label>البريد الإلكتروني *</label>
+        <input type="text" id="eventEmail" class="form-control mb-3" required placeholder="example@mail.com">
+
+          <button type="submit" class="btn btn-primary w-100">إرسال</button>
+        </form>
+        <div id="eventSuccessMsg" class="text-success fw-bold mt-3" style="display:none;">
+          تم إرسال بيانات فعاليتك بنجاح ✅
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- البوب أب 2: سجل المقر -->
+  <div class="popup-overlay" id="popupLocation">
+    <div class="popup-box">
+      <button class="close-btn" onclick="closeLocationPopup()">&times;</button>
+      <div class="popup-left"></div>
+      <div class="popup-right">
+        <h3>سجل مقر فعاليتك</h3>
+        <form id="locationForm">
+          <label>اسم الجهة *</label>
+          <input type="text" class="form-control mb-2" required>
+          <label>عدد مواقف السيارات *</label>
+          <input type="number" class="form-control mb-2" required min="0">
+          <label>مسؤول الحجوزات *</label>
+          <input type="text" class="form-control mb-2" required>
+          <label>رقم مسؤول الحجوزات *</label>
+          <input type="text" id="locationPhone" class="form-control mb-2" placeholder="05XXXXXXXX" required maxlength="10">
+          <label>البريد الإلكتروني *</label>
+                <input type="text" id="eventEmail" class="form-control mb-3" required placeholder="example@mail.com">
+          <label>آلية الحجز *</label>
+          <input type="text" class="form-control mb-2" required>
+          <label>الملاحظات *</label>
+          <textarea class="form-control mb-3" rows="3"></textarea>
+          <button type="submit" class="btn btn-primary w-100">إرسال</button>
+        </form>
+        <div id="locationSuccessMsg" class="text-success fw-bold mt-3" style="display:none;">
+          تم إرسال بيانات المقر بنجاح ✅
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- الكارد السفلي -->
+  <div class="flex-center">
+    <div class="contact-card">
       <div class="logo-column">
-          <img src="/images/logo2.png" alt="Contact Logo">
-          <p class="logo-description">
-              منصة إلكترونية تمكن المنشآت بمنطقة المدينة المنورة، من التسجيل والمنافسة على المشاريع المطروحة بهدف تعزيز المحتوى المحلي
-          </p>
+        <img src="/images/logo2.png" alt="Contact Logo">
+        <p class="logo-description">
+          منصة إلكترونية تمكن المنشآت بمنطقة المدينة المنورة، من التسجيل والمنافسة على المشاريع المطروحة بهدف تعزيز المحتوى المحلي
+        </p>
       </div>
 
-      <!-- العمود الثاني - تواصل معنا -->
       <div class="column">
-          <h3>تواصل معنا</h3>
-          <p>المملكة العربية السعودية، المدينة المنورة طريق الملك عبدالعزيز</p>
-          <p>info@mcci.org.sa</p>
-          <p>920028910</p>
+        <h3>تواصل معنا</h3>
+        <p>المملكة العربية السعودية، المدينة المنورة طريق الملك عبدالعزيز</p>
+        <p>info@mcci.org.sa</p>
+        <p>920028910</p>
       </div>
 
-      <!-- العمود الثالث - روابط مهمة -->
       <div class="column">
-          <h3>روابط مهمة</h3>
-          <p>الشروط والأحكام</p>
-          <p>المشاريع</p>
-          <p>برامج التأهيل</p>
+        <h3>روابط مهمة</h3>
+        <p>الشروط والأحكام</p>
+        <p>المشاريع</p>
+        <p>برامج التأهيل</p>
       </div>
         
-            <div class="column">
-          <h3>خدماتنا</h3>
-          <p>التسجيل</p>
-          <p>مزودي الخدمات</p>
+      <div class="column">
+        <h3>خدماتنا</h3>
+        <p>التسجيل</p>
+        <p>مزودي الخدمات</p>
       </div>
-
+    </div>
   </div>
-</div>
 
-  <!-- استدعاء الفوتر -->
+  <!-- الفوتر -->
   <div id="footer"></div>
 
-  <!-- استدعاء ملف JavaScript العام -->
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-

@@ -1,0 +1,163 @@
+/* Reset & body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+h2 {
+margin-top: 120px;
+margin-bottom: 30px;
+  text-align: center;
+  color: #b11e4e;
+  margin-bottom: 30px;
+}
+
+#factory-info {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+#factory-info p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+table thead {
+  background: #b11e4e;
+  color: #fff;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background: #ffe6eb;
+}
+
+/* تنسيقات بطاقة التواصل */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.contact-card .column,
+.contact-card .logo-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.contact-card img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+#products-table {
+  width: 90%; /* يقلل عرض الجدول */
+  margin: 20px auto; /* لتوسيط الجدول */
+  font-size: 13px; /* تصغير حجم الخط */
+  border-collapse: collapse; 
+}
+
+#products-table th, #products-table td {
+  padding: 6px 8px; /* تقليل المسافة داخل الخلايا */
+  text-align: center;
+}
+
+#products-table thead {
+  background: #b11e4e;
+  color: #fff;
+  font-size: 14px; /* حجم خط أقل للرأس */
+}
+
+#products-table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+#products-table tbody tr:hover {
+  background: #ffe6eb;
+}
+
+/* Media Queries لجعل الصفحة متجاوبة */
+@media screen and (max-width: 1024px) {
+    #factory-info {
+        padding: 15px;
+    }
+    table th, table td {
+        padding: 5px 6px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        margin-top: 100px;
+        font-size: 20px;
+    }
+    #factory-info {
+        padding: 10px;
+    }
+    #products-table th, #products-table td {
+        font-size: 12px;
+        padding: 4px 5px;
+    }
+    .contact-card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 18px;
+        margin-top: 80px;
+    }
+    #products-table th, #products-table td {
+        font-size: 11px;
+        padding: 3px 4px;
+    }
+    #factory-info p {
+        font-size: 14px;
+    }
+    .contact-card img {
+        max-width: 120px;
+    }
+}

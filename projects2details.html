@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع تجريبي</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- استدعاء الهيدر -->
+    <div id="header"></div>
+
+
+  <div class="container-details py-5">
+    <div class="row g-4">
+      <!-- العمود الأيمن (البطاقة الجانبية) -->
+      <aside class="col-lg-4 col-md-5">
+        <div class="card card-side ">
+          <div class="logo-circle">
+            <!-- ضع هنا رابط الصورة أو شعارك -->
+            <img src="/images/11111.jpg" alt="شعار" style="max-width:90%; max-height:90%;">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title-d mb-1">غرفة المدينة المنورة</h5>
+            <p class="mb-3 small text-muted">الحراسات الأمنية ومراقبة الأمن والسلامة لمبنى غرفة المدينة المنورة</p>
+
+            <div class="d-grid gap-2 mb-3">
+          <!-- زر المودال -->
+         <button class="colorbtn" data-bs-toggle="modal" data-bs-target="#projectDetailsModal">
+  تفاصيل مشروع
+</button>
+              <a href="singin.html" class="colorbtn">الرجاء التسجيل للتقديم على المشروع</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- العمود الأيسر (المحتوى الرئيسي) -->
+      <main class="col-lg-8 col-md-7">
+        <div class="left-panel">
+          <h2 class="projectsdetail-title">عن المشروع</h2>
+          <hr>
+
+          <!-- تفاصيل (أيكونات + نص) -->
+          <ul class="meta-list p-0 mb-4">
+            <li class="d-flex align-items-center"><i class="bi bi-info-circle-fill"></i> <strong class="me-2">تصنيف المشروع : </strong> خدمي</li>
+            <li class="d-flex align-items-center"><i class="bi bi-building-fill"></i> <strong class="me-2">المساحة: </strong> - </li>
+            <li class="d-flex align-items-center"><i class="bi bi-geo-alt-fill"></i> <strong class="me-2">الموقع:</strong> مدينة المستودعات</li>
+            <li class="d-flex align-items-center"><i class="bi bi-calendar-event-fill"></i> <strong class="me-2">تاريخ بداية الفرصة:</strong> 2025/04/21 م</li>
+            <li class="d-flex align-items-center"><i class="bi bi-calendar-x-fill"></i> <strong class="me-2">تاريخ نهاية الفرصة:</strong> 2025/05/10 م</li>
+          </ul>
+
+          <!-- نبذة -->
+          <h4 class="projectsdetail-title">نبذة</h4>
+          <hr>
+          <div class="about-boxprojects mb-4">
+          <p>
+    القيام بأعمال الحراسات الأمنية بمدينة المستودعات على مدار 24 ساعة لمدة 7 أيام في الأسبوع، تنظيم حركة السير، 
+    القيام بالجولات الميدانية ورفع التقارير المطلوبة للإدارة المعنية.
+     ( يرجى الاطلاع الى الملخص التنفيذي للحصول على R.F.P) رابط كراسة الشروط: https://drive.google.com/file/d/1BhLS-BVx61o7zuEnQCEkRQEDnOEVEaJw/view?usp=sharing
+
+          </p>
+          </div>
+
+          <!-- عدد الخدمات المطلوبة مثال -->
+          <h5 class="badge">إجمالي عدد الخدمات المطلوبة <span class="badge ">1</span></h5>
+
+          <!-- جدول عرض خدمات (نموذج) -->
+          <div class="table-responsive bg-white p-2">
+            <table class="table-details table">
+              <thead>
+                <tr>
+                  <th>الخدمة</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-muted">الإنشاءات العامة للمباني الغير السكنية ، يشمل ( المدارس ، المستشفيات، الفنادق ...الخ )</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+
+<!-- مودال -->
+<div class=" modal fade zoom-modal" id="projectDetailsModal" tabindex="-1" aria-labelledby="projectDetailsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-start">
+        <button type="button-details" class="btn-close me-0" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+        <h5 class="modal-title ms-3" id="projectDetailsLabel">تفاصيل المشروع</h5>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group mb-3">
+          <li class="list-group-item"><strong>نوع المشروع:</strong> خدمي</li>
+          <li class="list-group-item">
+            <strong>ملخص تنفيذي للمشروع:</strong><br>
+            <a href="https://lc.mcci.org.sa/pdf/Project/081d968f-6a83-4c13-99b5-cc4185093b15_%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D8%B3%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D9%85%D9%86%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%B3%D8%AA%D9%88%D8%AF%D8%B9%D8%A7%D8%AA.pdf" target="_blank" class="model-btn btn btn-sm  me-2">عرض الملف</a>
+            <a href="https://lc.mcci.org.sa/pdf/Project/081d968f-6a83-4c13-99b5-cc4185093b15_%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D8%B3%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D9%85%D9%86%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D8%B3%D8%AA%D9%88%D8%AF%D8%B9%D8%A7%D8%AA.pdf" target="_blank" class="model-btn btn btn-sm ">تحميل الملف</a>
+          </li>
+          <li class="list-group-item"><strong>درجة التصنيف:</strong> لا يشترط تصنيف</li>
+          <li class="list-group-item"><strong>معلومات إضافية:</strong> </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn" data-bs-dismiss="modal">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <!-- زر الدردشة/محادثة دائري -->
+  <button class="chat-fab" aria-label="محادثة">
+    <!-- أيقونة دردشة بسيطة -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M8 1a7 7 0 1 0 4.546 12.684L15 15l-1.316-2.184A7 7 0 0 0 8 1z"/>
+    </svg>
+  </button>
+
+
+
+
+<!-- قسم الفوتر -->
+
+
+     <div class="flex-center">
+  <div class="contact-card">
+      
+      <!-- العمود الأول - اللوجو -->
+      <div class="logo-column">
+          <img src="/images/logo2.png" alt="Contact Logo">
+          <p class="logo-description">
+              منصة إلكترونية تمكن المنشآت بمنطقة المدينة المنورة، من التسجيل والمنافسة على المشاريع المطروحة بهدف تعزيز المحتوى المحلي
+          </p>
+      </div>
+
+      <!-- العمود الثاني - تواصل معنا -->
+      <div class="column">
+          <h3>تواصل معنا</h3>
+          <p>المملكة العربية السعودية، المدينة المنورة طريق الملك عبدالعزيز</p>
+          <p>info@mcci.org.sa</p>
+          <p>920028910</p>
+      </div>
+
+      <!-- العمود الثالث - روابط مهمة -->
+      <div class="column">
+          <h3>روابط مهمة</h3>
+          <p>الشروط والأحكام</p>
+          <p>المشاريع</p>
+          <p>برامج التأهيل</p>
+      </div>
+        
+            <div class="column">
+          <h3>خدماتنا</h3>
+          <p>التسجيل</p>
+          <p>مزودي الخدمات</p>
+      </div>
+
+  </div>
+</div>
+
+    <!-- استدعاء الفوتر -->
+    <div id="footer"></div>
+
+    <!-- JavaScript لاستدعاء الهيدر والفوتر -->
+    <script src="script.js"></script>
+      <script src="main.js"></script>
+
+
+        <!-- Bootstrap JS و Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

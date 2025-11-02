@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تفاصيل مزود الخدمة</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- الهيدر -->
+<div id="header"></div>
+
+
+
+    
+
+  <div class="layout">
+    <!-- العمود الأيمن: السايد بارين -->
+    <div>
+      <!-- السايد بار الأول -->
+      <aside class="sidebar">
+        <img src="images/photo.png" alt="صورة المنشأة">
+        <h3>بيانات المنشأة</h3>
+        <ul>
+          <li id="openEmployees">الموظفين</li>
+          <li id="openEquipment">المعدات</li>
+          <li id="openProjects">سابقة الأعمال</li>
+        </ul>
+      </aside>
+
+      <!-- السايد بار الثاني -->
+      <aside class="sidebar">
+        <h3>معلومات إضافية</h3>
+        <p><strong>المدينة:</strong> المدينة المنورة</p>
+        <p><strong>درجة التصنيف:</strong> الثانية</p>
+        <p><strong>عدد المشاريع المنفذة:</strong> 50</p>
+      </aside>
+    </div>
+
+    <!-- العمود الأيسر: المحتوى الرئيسي -->
+    <div>
+      <!-- بطاقة تفاصيل المزود -->
+      <main class="provider-details">
+
+        <h2 id="providerName">شركة أسطورة طيبة للمقاولات</h2>
+        <p id="providerDesc">نقدم خدمات المقاولات بأعلى جودة ومعايير السلامة.</p>
+        <p>الفئة: <span id="providerCategory">المقاولات</span></p>
+        <p>حجم الشركة: <span id="providerSize">كبيرة</span></p>
+      </main>
+
+      <!-- مربع عن المنشأة منفصل -->
+      <section class="about-card">
+        <h3>عن المنشأة</h3>
+        <p><strong>حجم المنشأة:</strong> 50 - 249 موظف</p>
+        <p><strong>تصنيف المنشأة:</strong> تشييد وبناء</p>
+        <p><strong>درجة التصنيف:</strong> الثانية</p>
+        <p><strong>عنوان المنشأة:</strong> حي العريض، شارع الأمير مقرن بن عبدالعزيز ، مجمع السعيد الدولي، المدينة المنورة</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- مودال الموظفين -->
+  <div id="employeesModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeEmployees">&times;</span>
+      <h3>إجمالي عدد الموظفين: 107</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>نوع الوظيفي</th>
+            <th>المسمى الوظيفي</th>
+            <th>العدد</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>فني</td><td>كهربائي</td><td>8</td></tr>
+          <tr><td>فني</td><td>سباك</td><td>5</td></tr>
+          <tr><td>فني</td><td>نجار</td><td>2</td></tr>
+          <tr><td>فني</td><td>حداد</td><td>7</td></tr>
+          <tr><td>فني</td><td>مهندس مكانيكا</td><td>4</td></tr>
+          <tr><td>فني</td><td>مهندس مكانيكا</td><td>4</td></tr>
+          <tr><td>فني</td><td>مهندس معماري</td><td>2</td></tr>
+          <tr><td>فني</td><td>مهندس كهربائي</td><td>5</td></tr>
+          <tr><td>فني</td><td>عامل</td><td>30</td></tr>
+          <tr><td>فني</td><td>عامل لياسة</td><td>10</td></tr>
+          <tr><td>إداري</td><td>عامل</td><td>30</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- مودال المعدات -->
+  <div id="equipmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeEquipment">&times;</span>
+      <h3>إجمالي عدد المعدات: 14</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>المعدة</th>
+            <th>العدد</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>الحفارات</td><td>2</td></tr>
+          <tr><td>2</td><td>شيولات مجنزرة</td><td>2</td></tr>
+          <tr><td>3</td><td>معدات الخرسانية</td><td>2</td></tr>
+          <tr><td>4</td><td>مخارط</td><td>3</td></tr>
+          <tr><td>5</td><td>لوادر حفارة</td><td>2</td></tr>
+          <tr><td>6</td><td>رافعات</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- مودال سابقة الأعمال -->
+  <div id="projectsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeProjects">&times;</span>
+      <h3>إجمالي عدد المشاريع المنفذة: 50</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>العنوان</th>
+            <th>ملف المشروع</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>مشروع اسكان اعضاء هيئة التدريس بالجامعة الاسلامية في المدينة المنورة</td><td></td></tr>
+          <tr><td>2</td><td>عملية اعادة بناء سور مبنى بلدية الفريش</td><td></td></tr>
+          <tr><td>3</td><td>توريد و تركيب كابل جهد متوسط</td><td></td></tr>
+          <tr><td>4</td><td>تركيب كاميرات</td><td></td></tr>
+          <tr><td>5</td><td>مشروع صيانة و نظافة</td><td></td></tr>
+          <tr><td>6</td><td>استكمال تحسين و تجميل الشوارع و الارصفة بالمنطقة المركزية بالمدينة المنورة</td><td></td></tr>
+          <tr><td>7</td><td>مشروع تنفيذ أعمال البنية التحتية لمخطط بدر السليمان بالمدينة المنورة – حي شظاه – منطقة قناة</td><td></td></tr>
+          <tr><td>8</td><td>تأجير اليات</td><td></td></tr>
+          <tr><td>9</td><td>توريد منتجات كسارة</td><td></td></tr>
+          <tr><td>10</td><td>استكمال تحسين و تجميل الشوارع و الارصفة بالمنطقة المركزية بالمدينة المنورة</td><td></td></tr>
+          <tr><td>11</td><td>مشروع ابدال العدادات الكهربائية وصيانتها بمنطقة المدينة المنورة</td><td></td></tr>
+          <tr><td>12</td><td>مشروع ابدال العدادات الكهربائية وصيانتها بمنطقة المدينة المنورة</td><td></td></tr>
+          <tr><td>13</td><td>عقد تنفيذ اعمال صيانة العدادات</td><td></td></tr>
+          <tr><td>14</td><td>مشروع البنية التحتية لأعمال الكهرباء بمخطط موسي عبد الله الهاجوج بالمدينة المنورة</td><td></td></tr>
+          <tr><td>15</td><td>مشروع البنية التحتية لأعمال الكهرباء بمخطط محمد امين السباعي بالمدينة المنورة</td><td></td></tr>
+          <tr><td>16</td><td>عقد تنفيذ اعمال صيانة العدادات</td><td></td></tr>
+          <tr><td>17</td><td>مشروع البنية التحتية لأعمال الكهرباء بمخطط فهد منصور الشريف بالمدينة المنورة</td><td></td></tr>
+          <tr><td>18</td><td>مشروع البنية التحتية لأعمال الكهرباء بمخطط فيصل نويفع السحيمي بالمدينة المنورة</td><td></td></tr>
+          <tr><td>19</td><td>اعمال لوجستية</td><td></td></tr>
+          <tr><td>20</td><td>اعمال انشائية</td><td></td></tr>
+          <tr><td>21</td><td>توفير خدمات</td><td></td></tr>
+          <tr><td>22</td><td>اعمال انشائية</td><td></td></tr>
+          <tr><td>23</td><td>مشروع البنية التحتية لأعمال الكهرباء بمخطط اليمامة بالمدينة المنورة</td><td></td></tr>
+          <tr><td>24</td><td>مشروع إسكان الملك عبد العزيز</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="flex-center">
+  <div class="contact-card">
+      
+      <!-- العمود الأول - اللوجو -->
+      <div class="logo-column">
+          <img src="/images/logo2.png" alt="Contact Logo">
+          <p class="logo-description">
+              منصة إلكترونية تمكن المنشآت بمنطقة المدينة المنورة، من التسجيل والمنافسة على المشاريع المطروحة بهدف تعزيز المحتوى المحلي
+          </p>
+      </div>
+
+      <!-- العمود الثاني - تواصل معنا -->
+      <div class="column">
+          <h3>تواصل معنا</h3>
+          <p>المملكة العربية السعودية، المدينة المنورة طريق الملك عبدالعزيز</p>
+          <p>info@mcci.org.sa</p>
+          <p>920028910</p>
+      </div>
+
+      <!-- العمود الثالث - روابط مهمة -->
+      <div class="column">
+          <h3>روابط مهمة</h3>
+          <p>الشروط والأحكام</p>
+          <p>المشاريع</p>
+          <p>برامج التأهيل</p>
+      </div>
+        
+            <div class="column">
+          <h3>خدماتنا</h3>
+          <p>التسجيل</p>
+          <p>مزودي الخدمات</p>
+      </div>
+
+  </div>
+</div>
+<!-- الفوتر -->
+<div id="footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="details.js"></script>
+</body>
+</html>

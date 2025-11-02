@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* العنوان الرئيسي */
+h2 {
+  text-align: center;
+  margin: 40px 0;
+  color: #b11e4e;
+}
+
+/* حاوية الكروت */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  padding: 60px 20px;
+  max-width: 1600px;
+  background-image: url('/images/background.png'),linear-gradient(147deg , #897bb02f ,#2eb5d01f) ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+@media (min-width: 1200px) {
+  .cards {
+    padding: 60px 300px; /* للشاشات الكبيرة */
+  }
+}
+/* الكارد */
+.card {
+  display: flex;
+  flex-direction: column;
+justify-content: space-between; /* يدفع الزر للأسفل */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* عنوان الكارد */
+.card h3 {
+  margin-bottom: 10px;
+  color: #b11e4e;
+  font-size: 18px;
+}
+
+/* الفقرات داخل الكارد */
+.card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* زر التفاصيل */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #b11e4e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #8f1640;
+}
+
+/* تباعد الحاويات الأخرى */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-card .column,
+.contact-card .logo-column {
+  flex: 1 1 200px;
+}
+
+.logo-column img {
+  max-width: 120px;
+  margin-bottom: 15px;
+}
+
+.logo-description {
+  font-size: 14px;
+  color: #555;
+}
